@@ -1,0 +1,160 @@
+<div class="profile">
+    <div class="profile-info profile-form">
+      <div class="profile-form__header">
+        <div class="profile-form__header-title">
+          Hồ sơ của tôi
+        </div>
+        <div class="profile-form__header-notice">
+          Vui lòng khai báo thông tin chính xác để được hỗ trợ tốt hơn
+        </div>
+      </div>
+
+      <div class="grid__row">
+        <div class="profile-form-wrapper">
+          <!-- Form input -->
+          <div class="grid__column-9">
+            <div class="profile-form__list">
+              
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                  Họ và tên
+                </div>
+                <input type="text" [(ngModel)]="userProfile.displayName"  class="profile-item-input">
+              </div>
+
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                  Ngày sinh
+                </div>
+                <div class="profile-item-input-group">
+                  <select #day [(ngModel)]="birthdayProfile.day"  name="" id="" class="profile-item-input date-input date-input-day">
+                  
+                  </select>
+                  <select #month [(ngModel)]="birthdayProfile.month" (change)="populateDays(month.value)" name="" id="" class="profile-item-input date-input date-input-month">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select #year [(ngModel)]="birthdayProfile.year" (change)="populateDays(month.value)" name="" id="" class="profile-item-input date-input">
+                  </select>
+                </div>
+                <!-- <input type="date" [(ngModel)]="userProfile.birthDay" class="profile-item-input"/> -->
+              </div>
+
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                  Giới tính
+                </div>
+
+                <div class="profile-item-radio-group">
+                  <input type="radio" [(ngModel)]="userProfile.gender" [checked]="userProfile.gender==='MALE'" value="MALE" class="profile-item-radio-btn" name="gender">
+                  <div class="profile-item-radio-label">Nam</div>
+                </div>
+                <div class="profile-item-radio-group">
+                  <input type="radio" [(ngModel)]="userProfile.gender" [checked]="userProfile.gender==='FEMALE'" value="FEMALE" class="profile-item-radio-btn" name="gender">
+                  <div class="profile-item-radio-label">Nữ</div>
+                </div>
+                <div class="profile-item-radio-group">
+                  <input type="radio" [(ngModel)]="userProfile.gender" [checked]="userProfile.gender==='OTHER'" value="OTHER" class="profile-item-radio-btn" name="gender">
+                  <div class="profile-item-radio-label">Khác</div>
+                </div>
+
+              </div>
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                  Số điện thoại
+                </div>
+                <input type="text" [(ngModel)]="userProfile.phone"  class="profile-item-input">
+              </div>
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                  Email
+                </div>
+                <input type="text" [(ngModel)]="userProfile.email"  class="profile-item-input">
+              </div>
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                </div>
+                <button class="profile-update-btn btn">Cập nhập</button>
+              </div>
+            </div>
+          </div>
+          <!-- Avatar Upload-->
+          <div class="grid__column-3">
+            <div class="profile-avatar">
+              <img [src]="avatarImg" alt=""
+                class="profile-avatar__image">
+              <button (click)="handleUploadBtnClick()" class="profile-avatar-btn btn">
+                Chọn ảnh
+              </button>
+              <input type="file" class="upload-btn" hidden>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="profile__change-pass profile-form">
+      <div class="profile-form__header">
+        <div class="profile-form__header-title">
+          Đổi mật khẩu
+        </div>
+        <div class="profile-form__header-notice">
+          Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác
+        </div>
+      </div>
+      <div class="grid__row">
+        <div class="profile-form-wrapper">
+          <div class="grid__column-9">
+            <div class="profile-form__list">
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                  Mật khẩu hiện tại
+                </div>
+                <input type="password" class="profile-item-input">
+              </div>
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                  Mật khẩu mới
+                </div>
+                <input type="password" class="profile-item-input">
+              </div>
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                  Xác nhận mật khẩu
+                </div>
+                <input type="password" class="profile-item-input">
+              </div>
+              <div class="profile-item-group">
+                <div class="profile-item-label">
+                </div>
+                <button class="profile-confirm-btn btn">Xác nhận</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="grid__column-3">
+            <div class="profile-form__list">
+              <div class="profile-item-group">
+                <div class="forgot-pass">
+                  <a href="" class="forgot-pass__link">
+                    Quên mật khẩu!
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

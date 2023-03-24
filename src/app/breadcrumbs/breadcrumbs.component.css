@@ -1,0 +1,20 @@
+.breadcrumbs{
+    background: linear-gradient(90deg, #B8B8B8 0%, rgba(184, 184, 184, 0) 100%);
+}
+
+.breadcrumbs-wrapper{
+    display: flex;
+    height: 24px;
+    align-items: center;
+}
+
+.breadcrumbs-item{
+    font-size: 1.4rem;
+    color: #FFF
+}
+
+.breadcrumbs-seperate{
+    font-size: 1.4rem;
+    color:#FFF;
+    margin: 0 5px;
+}

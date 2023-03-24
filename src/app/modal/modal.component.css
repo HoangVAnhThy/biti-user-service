@@ -1,0 +1,114 @@
+/* Modal */
+.back-link{
+    cursor:default;
+}
+
+.auth-form{
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;   
+}
+
+.auth-form__container{
+    padding: 32px 127px;
+}
+/* Auth Header */
+.auth-form__header{
+    text-align: center;
+}
+.auth-form__header-heading{
+    font-size: 1.6rem;
+    color: #5c5c5c;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.auth-form__header-notice{
+    font-size: 1.3rem;
+    color: #5c5c5c;
+    line-height: 24px;
+}
+
+/* Form */
+.auth-form__form{
+    padding: 8px 8px 0 8px;
+}
+.auth-form__form-group{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
+}
+
+.auth-form__form-label{
+    font-size: 1.2rem;
+    color: #5c5c5c;
+    line-height: 20px;
+}
+
+.auth-form__form-input{
+    border-radius: 8px;
+    border: 1px solid #DADADA;
+    height: 35px;
+    padding: 12px;
+    outline: none;
+}
+/* Aside */
+.auth-form__aside{
+    display: flex;
+    padding: 12px 8px 0 8px;
+    justify-content: space-between;
+    align-items: center;
+    color: #333333;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.auth-form__aside-sign-in{
+    display: flex;
+    align-items: center;
+}
+.auth-form__aside-sign-in-link{
+    text-decoration: none;
+    color: #C50000;
+    margin-left: 5px;
+}
+
+.auth-form__aside-forgot-pass-link{
+    text-decoration: none;
+    color: #C50000;
+}
+/* Control */
+.auth-form__control{
+    padding: 32px 80px;
+}
+.auth-form__control-sign-in-btn{
+    background-color: #C50000;
+    border: none;
+    border-radius: 6px;
+    height: 35px;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Social */
+
+.auth-form__social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth-form__social-icon-img{
+    width: 34px;
+    height: 34px;
+}
+
+.auth-form__social-group{
+    display: flex;
+    align-items: center;
+    margin: 0 16px;
+}
+.auth-form__social-text{
+    margin-left: 16px;
+    font-size: 1rem;
+}

@@ -1,0 +1,48 @@
+<div class="menu-profile">
+    <div class="menu-profile-header">
+      <div class="menu-profile-header__avatar">
+        <img src={{userProfile.avatar}} alt=""
+          class="menu-profile-header__avatar-img">
+      </div>
+      <div  class="menu-profile-header__text">
+        {{userProfile.displayName}}
+      </div>
+    </div>
+
+    <div class="menu-profile-list">
+      <div class="menu-profile-item" routerLinkActive="menu-profile-item--active"
+      [routerLinkActiveOptions]="{exact: true}">
+        <span class="material-symbols-outlined">
+          account_circle
+        </span>
+        <a routerLink="/profile" class="menu-profile-item-link">Thông tin tài khoản</a>
+      </div>
+      <div class="menu-profile-item" routerLinkActive="menu-profile-item--active"
+      [routerLinkActiveOptions]="{exact: true}">
+        <span class="material-symbols-outlined">
+          sticky_note_2
+        </span>
+        <a routerLink="/address" class="menu-profile-item-link">Sổ địa chỉ</a>
+      </div>
+      <div class="menu-profile-item" routerLinkActive="menu-profile-item--active"
+      [routerLinkActiveOptions]="{exact: true}">
+        <span class="material-symbols-outlined">
+          list_alt
+        </span>
+        <a routerLink="/order" class="menu-profile-item-link">Quản lí đơn hàng</a>
+      </div>
+      <div class="menu-profile-item" routerLinkActive="menu-profile-item--active"
+      [routerLinkActiveOptions]="{exact: true}">
+        <span class="material-symbols-outlined">
+          collections_bookmark
+        </span>
+        <a routerLink="/favorite" class="menu-profile-item-link">Danh mục yêu thích</a>
+      </div>
+      <div class="menu-profile-item">
+        <span class="material-symbols-outlined">
+          help
+        </span>
+        <a href="" class="menu-profile-item-link">Trợ giúp</a>
+      </div>
+    </div>
+  </div>

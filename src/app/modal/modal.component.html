@@ -1,0 +1,82 @@
+<!-- Modal Layout -->
+<div class="modal modal--active">
+  <a routerLink="/" class="back-link">
+    <div class="modal__overlay">
+
+    </div>
+  </a>
+
+  <div class="modal__body">
+    <div class="auth-form">
+      <div class="auth-form__container">
+        <!-- Header -->
+        <div class="auth-form__header">
+          <div class="auth-form__header-heading">
+            ĐĂNG NHẬP
+          </div>
+          <div class="auth-form__header-notice">
+            Bạn chưa có tài khoản, vui lòng đăng ký để tiếp tục trải nghiệm nền tảng
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="auth-form__form">
+
+          <div class="auth-form__form-group">
+            <div class="auth-form__form-label">
+              Tài khoản
+            </div>
+            <input [(ngModel)]="signInReq.username" type="text" class="auth-form__form-input" placeholder="Số điện thoại / Email">
+          </div>
+
+          <div class="auth-form__form-group">
+            <div class="auth-form__form-label">
+              Mật khẩu
+            </div>
+            <input [(ngModel)]="signInReq.password" type="password" class="auth-form__form-input" placeholder="**********">
+          </div>
+        </div>
+        <div class="auth-form__aside">
+          <div class="auth-form__aside-sign-in">
+            <div class="auth-form__aside-sign-in-text">
+              Bạn chưa có tài khoản vui lòng
+            </div>
+            <a href="" class="auth-form__aside-sign-in-link">
+              Đăng ký
+            </a>
+          </div>
+          <a href="" class="auth-form__aside-forgot-pass-link">
+            Quên mật khẩu
+          </a>
+        </div>
+        <!-- Control -->
+        <div class="auth-form__control">
+          <button class="auth-form__control-sign-in-btn" (click)="handleLogin()">
+            Đăng nhập
+          </button>
+        </div>
+        <!-- Social -->
+        <div class="auth-form__social">
+          <div class="auth-form__social-group">
+            <div class="auth-form__social-icon">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
+                alt="" class="auth-form__social-icon-img">
+            </div>
+            <div class="auth-form__social-text">
+              Facebook
+            </div>
+
+          </div>
+          <div class="auth-form__social-group">
+            <div class="auth-form__social-icon">
+              <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" alt="" class="auth-form__social-icon-img">
+            </div>
+            <div class="auth-form__social-text">
+              Google
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+<div class="my-cart">
+    <!-- Heading -->
+    <div class="my-cart__heading">
+      GIỎ HÀNG CỦA TÔI
+    </div>
+    <div class="my-cart__heading-control">
+      <div class="my-cart__heading-control-item">
+        Danh sách sản phẩm
+      </div>
+      <div class="my-cart__heading-control-item">
+        Tất cả sản phẩm
+      </div>
+      <div class="my-cart__heading-control-item flex-align-center">
+          <input type="checkbox" (click)="handleCheckBoxAll($event)" class="my-cart__heading-control-item-checkbox-all">
+        <div class="my-cart__heading-control-item-checkbox-all-text">
+          Chọn tất cả sản phẩm
+        </div>
+      </div>
+      <div class="my-cart__heading-control-item">
+        Xóa các sản phẩm đã chọn
+      </div>
+    </div>
+    <!-- List cart -->
+    <div class="my-cart__list">
+      <div class="my-cart__list-heading">
+        <div class="grid__row">
+          <div class="grid__column-1">
+
+          </div>
+          <div class="grid__column-3-6">
+            Sản phẩm
+          </div>
+          <div class="grid__column-2 column-center">
+            Đơn giá
+          </div>
+          <div class="grid__column-2 column-center">
+            Số lượng
+          </div>
+          <div class="grid__column-2 column-center">
+            Thành tiền
+          </div>
+          <div class="grid__column-1-4 column-center">
+            Thao tác
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="my-cart__item" *ngFor="let cart of carts">
+        <div class="grid__row align-center">
+          <div class="grid__column-1 column-center">
+            <input type="checkbox" (change)="handleCheckBoxItem($event,cart.product?.price,cart.quantity)" class="my-cart__item-checkbox">
+          </div>
+          <div class="grid__column-3-6 my-cart__item-info">
+            <div class="my-cart__item-thumbnail">
+              <img [src]="cart.product?.thumbnail" alt=""
+                class="my-cart__item-thumbnail-img">
+            </div>
+            <div class="my-cart__item-name">
+              {{cart.product?.productName}}
+            </div>
+          </div>
+          <div class="grid__column-2 column-center flex-column">
+            <div class="my-cart__item-price-current">
+              {{cart.product?.priceString}}
+            </div>
+            <div class="my-cart__item-price-old">
+              150.000đ
+            </div>
+          </div>
+          <div class="grid__column-2 column-center quantity-control">
+            <button (click)="decreaseCount($event,cart.product?.price,cart.product?.productId)" class="btn-decrease">-</button>
+            <input type="number" [(ngModel)]="cart.quantity" inputmode="numeric" class="quantity-input">
+            <button (click)="increaseCount($event,cart.product?.price,cart.product?.productId)" class="btn-increase">+</button>
+          </div>
+          <div class="grid__column-2 column-center my-cart__item-total">
+            {{cart.totalPriceString}}
+          </div>
+          <div class="grid__column-1-4 column-center">
+            <span class="material-symbols-outlined my-cart__item-delete">
+              delete
+            </span>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+  </div>
+  
+  <!-- Control -->
+  <div class="my-cart__control">
+    <div class="my-cart__control-notice">
+      Đọc thêm về những 
+      <span class="my-cart__control-notice-highlight">
+        <a href="" class="my-cart__control-notice-link">chính sách mua hàng của</a>
+      </span>
+       chúng tôi !!
+    </div>
+    <div class="my-cart__control-btn-group">
+      <div class="my-cart__total-price">
+        <div class="my-cart__total-price-label">
+          Tổng tiền({{countProduct}}) : 
+        </div>
+        <div class="my-cart__total-price-value">
+          {{totalOrderPriceString}}
+        </div>
+      </div>
+      <button class="my-cart__forward-buy-btn btn">
+        Tiếp tục mua hàng
+      </button>
+      <button class="my-cart__order-btn btn">
+        Đặt hàng
+      </button>
+    </div>
+  </div>

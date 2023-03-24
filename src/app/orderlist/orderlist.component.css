@@ -1,0 +1,141 @@
+.order{
+
+}
+ /* Order Nav */
+.order-nav-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color:#8A8A8A;
+    padding: 12px;
+    margin: 0;
+}
+
+.order-nav-item--active{
+    border-bottom: 2px solid #5C5C5C;
+    padding: 3px 0;
+    color: #5C5C5C;
+}
+
+/* Order list */
+
+.order-item{
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.order-item__heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: #5C5C5C;
+    border-bottom: 1px solid #EBEBEB;
+    padding-bottom: 8px;
+}
+
+.order-item__heading-id-link{
+    text-decoration: none;
+    color: #5C5C5C;
+}
+
+.order-item__body{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.order-item__body-info{
+    display: flex;
+}
+
+.order-item__body-info-thumbnail{
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.order-item__body-info-text{
+    padding-left: 8px;
+}
+
+.order-item__body-info-title{
+    font-size: 1.4rem;
+    max-width: 400px;
+    line-height: 24px;
+    color: #5C5C5C;
+}
+
+.order-item__body-info-quantity{
+    font-size: 1.2rem;
+    color: #8A8A8A;
+    margin-top: 5px;
+}
+
+.order-item__body-price{
+    text-align: right;
+    line-height: 24px;
+}
+
+.order-item__body-price-current{
+    font-size: 1.5rem;
+    color: #C50000;
+    font-weight: 700;
+}
+.order-item__body-price-old{
+    text-decoration: line-through;
+    color: #5C5C5C;
+    font-size: 1.2rem;
+}
+
+/* Order Footer */
+
+.order-item__footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+}
+
+.order-item__footer-total{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.order-item__footer-total-text{
+    color: #5C5C5C;
+    margin-right: 6px;
+}
+
+.order-item__footer-total-value{
+    color: #C50000;
+    font-weight: 700;
+}
+
+.order-item__footer-control-contact{
+    border-radius: 4px;
+    font-size: 1.3rem;
+    padding: 0 16px;
+    color: #5C5C5C;
+    border: 1px solid #5C5C5C;
+    margin-right: 16px;
+}
+
+.order-item__footer-control-order-action{
+    border-radius: 4px;
+    background-color: #8A8A8A;
+    color: #fff;
+    padding: 0 16px;
+    font-weight: 300;
+    min-width: fit-content;
+}

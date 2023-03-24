@@ -1,0 +1,125 @@
+.profile-form{
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.profile-info{
+}
+
+/* profile info header */
+
+.profile-form__header{
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.profile-form__header-title{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #5C5C5C;
+    margin-bottom: 5px;
+}
+
+.profile-form__header-notice{
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+
+/* Form item */
+
+.profile-form-wrapper{
+    margin-top: 16px;
+    width: 100%;
+}
+
+.profile-form__list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-item-group{
+    display: flex;
+    align-items: center;
+    margin: 8px 0 ;
+}
+
+.profile-item-label{
+    font-size: 1.3rem;
+    min-width: 25%;
+}
+.profile-item-input{
+    height: 35px;
+    width: 100%;
+    border: 1px solid #E6E7E8;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+}
+
+.profile-item-input-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.date-input{
+    width: 30%;
+}
+
+.profile-item-radio-group{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.profile-item-radio-label{
+    font-size: 1.3rem;
+    color: var(--text-color)
+}
+
+.profile-item-radio-btn{
+    accent-color: red;
+}
+
+.profile-form-wrapper{
+    display: flex;
+}
+
+/* Form avatar */
+
+.profile-avatar{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.profile-avatar__image{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid #E6E7E8;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+/* Form change pass */
+
+.profile__change-pass{
+    margin-top: 18px;
+}
+
+.forgot-pass{
+    height: 35px;
+}
+
+.forgot-pass__link{
+    text-decoration: none;
+    color: #8a8a8a;
+    font-size: 1.3rem;
+    display: block;
+    line-height: 35px;
+}

@@ -1,0 +1,19 @@
+/* Body Content */
+
+.container{
+    background-color: #f5f5f5;
+    overflow: hidden;
+    padding-bottom: 16px;
+    min-height: 400px;
+}
+
+.container-wrap{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+
+
+
